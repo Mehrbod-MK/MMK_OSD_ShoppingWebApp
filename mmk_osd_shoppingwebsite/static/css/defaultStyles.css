@@ -57,7 +57,7 @@ a
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 7%;
+    margin: 0 5%;
 }
 
 .shop-div-mainbar .a-mainmenu-items
@@ -104,6 +104,8 @@ a
 .shop-index-header-div .shop-index-img-mart:hover
 {
     transform: scale(1.1);
+    
+    opacity: 70%;
 }
 
 .shop-index-header-div .shop-index-img-mart
