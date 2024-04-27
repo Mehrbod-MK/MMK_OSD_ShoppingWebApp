@@ -8,11 +8,28 @@
     <title>فروشگاه آنلاین مهربدکالا</title>
 
     <link rel="stylesheet" href="{% static 'css/defaultStyles.css' %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        <a href="#">سلام</a>
+    <!-- Main menu on top -->
+    <nav class="shop-nav-mainbar">
+        <div class="shop-div-mainbar FONT-alexandria-heavy">
+            <a href="#" class="a-mainmenu-items">صفحه اصلی</a>
+            <a href="#" class="a-mainmenu-items">محصولات</a>
+            <a href="#" class="a-mainmenu-items">پرفروش‌ها</a>
+            <a href="#" class="a-mainmenu-items">درباره ما</a>
+            <a href="#" class="a-mainmenu-items">تماس با ما</a>
+        </div>
     </nav>
+
+    <header>
+        {% block content_header %}{% endblock %}
+    </header>
+
 </body>
 </html>

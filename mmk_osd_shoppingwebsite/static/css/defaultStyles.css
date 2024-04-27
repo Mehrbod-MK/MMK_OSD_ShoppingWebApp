@@ -1,5 +1,60 @@
-body
+/* FONT SPECIFICATIONS */
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900*/ 
+
+*
 {
-    margin: 30px
+    scroll-behavior: smooth;
+
+    transition: 0.25s all ease-in-out;
 }
 
+.FONT-alexandria-heavy {
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body
+{
+    margin: 10px
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.shop-nav-mainbar
+{
+    /* margin-right: 30%; */
+}
+
+.shop-div-mainbar
+{
+    padding: 7px;
+
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 7%;
+}
+
+.shop-div-mainbar .a-mainmenu-items
+{
+    padding: 5px;
+
+    border-radius: 7px;
+
+    color: black
+}
+
+.shop-div-mainbar .a-mainmenu-items:hover
+{
+    background-color: yellow;
+}
