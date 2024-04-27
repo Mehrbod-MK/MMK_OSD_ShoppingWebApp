@@ -92,7 +92,7 @@ a
 
 .shop-index-header-div .shop-index-main-title
 {
-    font-size: 1.2em;
+    font-size: 2em;
     line-height: 150%;
 }
 
@@ -111,6 +111,11 @@ a
 .shop-index-header-div .shop-index-img-mart
 {
     width: auto;
+}
+
+.shop-index-header-div .shop-index-main-subtitle
+{
+    font-size: 1.5em;
 }
 
 .shop-index-header-div .shop-index-main-subtitle:hover
