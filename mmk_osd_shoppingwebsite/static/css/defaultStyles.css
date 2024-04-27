@@ -9,11 +9,26 @@
     transition: 0.25s all ease-in-out;
 }
 
+.FONT-alexandria-semiheavy {
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
 .FONT-alexandria-heavy {
   font-family: "Alexandria", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.FONT-alexandria-heaviest
+{
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: bold;
 }
 
 body
@@ -57,4 +72,59 @@ a
 .shop-div-mainbar .a-mainmenu-items:hover
 {
     background-color: yellow;
+}
+
+.shop-index-header-div
+{
+    margin: 0px 3px;
+    padding: 7px;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+
+    height: 70vh;
+}
+
+.shop-index-header-div .shop-index-main-title
+{
+    font-size: 1.2em;
+    line-height: 150%;
+}
+
+.shop-index-header-div .shop-index-main-title:hover
+{
+    transform: scale(1.025);
+}
+
+.shop-index-header-div .shop-index-img-mart:hover
+{
+    transform: scale(1.1);
+}
+
+.shop-index-header-div .shop-index-img-mart
+{
+    width: auto;
+}
+
+.shop-index-header-div .shop-index-main-subtitle:hover
+{
+    transform: scale(1.1);
+}
+
+.shop-index-right-header-div
+{
+    margin-right: 20px;
+}
+
+.shop-index-header-images-div
+{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
 }

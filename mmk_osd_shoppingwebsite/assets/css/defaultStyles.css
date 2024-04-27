@@ -1,9 +1,90 @@
+/* FONT SPECIFICATIONS */
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900*/ 
+
+*
+{
+    scroll-behavior: smooth;
+
+    transition: 0.25s all ease-in-out;
+}
+
+.FONT-alexandria-heavy {
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.FONT-alexandria-heaviest
+{
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: bold;
+}
+
 body
 {
-    margin: 30px
+    margin: 10px
 }
 
 a
 {
     text-decoration: none;
+}
+
+/*.shop-nav-mainbar
+{
+    
+}*/
+
+.shop-div-mainbar
+{
+    padding: 7px;
+
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 7%;
+}
+
+.shop-div-mainbar .a-mainmenu-items
+{
+    padding: 5px;
+
+    border-radius: 7px;
+
+    color: black
+}
+
+.shop-div-mainbar .a-mainmenu-items:hover
+{
+    background-color: yellow;
+}
+
+.shop-index-header-div
+{
+    background-color: gainsboro;
+
+    margin: 0px 3px;
+    padding: 7px;
+
+    border: 3px solid black;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 50vh;
+}
+
+.shop-index-header-div .shop-index-main-title
+{
+    font-size: 3m;
 }
