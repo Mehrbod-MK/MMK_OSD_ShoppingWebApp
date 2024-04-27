@@ -1,0 +1,24 @@
+{% extends "shop/defaultBase.html" %}
+
+{% block page_title %}ورود به حساب کاربری - مهربدکالا{% endblock %}
+
+{% block content_main %}
+
+<div class="login-div-main">
+    <div class="login-div-loginform">
+        <form method="post" action="{% url 'mmk-shop-userAuth' %}">
+            {% csrf_token %}
+            <label for="user_Username">نام کاربری:</label><br>
+            <input type="text" id="user_Username" name="user_Username"><br>
+            <label for="user_Username">کلمه عبور:</label><br>
+            <input type="text" id="user_Password" name="user_Password"><br>
+            <input type="submit" value="ورود">
+        </form>
+    </div>
+    <div class="login-div-descriptions">
+        
+        
+    </div>
+</div>
+
+{% endblock %}
