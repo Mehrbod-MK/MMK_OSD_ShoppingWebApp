@@ -5,5 +5,12 @@
         <h4>دسته‌بندی: <b>{{product.Product_Category|default:'دسته‌بندی نشده'}}</b></h4>
     </div>
     <img src="{{product.Product_ThumbImage|default:'./../../../static/images/blank-product.png'}}" width="176px" height="176px">
+    <div class="component-product-buttons-div">
+        <button class="component-product-buttons component-product-buttons-addToCart">+</button>
+        <button class="component-product-buttons component-product-buttons-removeFromCart">-</button>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 1.5em; color:darkgreen"><strong>0</strong></p>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 1.5em; color: darkred"><strong>7</strong></p>
+        <button class="component-product-buttons component-product-buttons-emptyCart">X</button>
+    </div>
 </div>
 

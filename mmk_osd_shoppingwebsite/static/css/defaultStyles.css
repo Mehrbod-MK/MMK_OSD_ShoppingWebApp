@@ -202,7 +202,63 @@ a
 
 .component-product-div:hover
 {
-    cursor: pointer;
+    /*TODO: Enable after designing product specification's page...*/
+    /*cursor: pointer;*/
 
     background-color: lightgreen;
+}
+
+.component-product-buttons-div
+{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+
+    align-items: center;
+
+    height: 100%;
+
+    margin: 0px 3px;
+}
+
+.component-product-buttons-div .component-product-buttons
+{
+    font-size: 2em;
+
+    background: transparent;
+    border: 3px solid black;
+
+    width: 100%;
+}
+
+.component-product-buttons-div .component-product-buttons:hover
+{
+    cursor: pointer;
+}
+
+.component-product-buttons-div .component-product-buttons:focus
+{
+    border: 3px dashed blue;
+}
+
+.component-product-buttons-div .component-product-buttons:active
+{
+    transition: 70ms;
+    background-color: yellow;
+}
+
+.component-product-buttons-addToCart:hover
+{
+    background-color: greenyellow;
+}
+
+.component-product-buttons-removeFromCart:hover
+{
+    background-color: lightsalmon;
+}
+
+.component-product-buttons-emptyCart:hover
+{
+    background-color: red;
 }
