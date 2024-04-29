@@ -67,11 +67,12 @@ def products(request):
     
     # Fetch products.
     productsQuery = Product.objects.all()
-    metas_Products = {};
-    products_List = [];
+    metas_Products = {}
+    products_List = []
 
     for productGet in productsQuery:
         dict_Product = {}
+        dict_Product['Product_ID'] = productGet.id
         dict_Product['Product_Name'] = productGet.name
         dict_Product['Product_Price'] = f'{productGet.price:,}'
         dict_Product['Product_Category'] = productGet.category.name
