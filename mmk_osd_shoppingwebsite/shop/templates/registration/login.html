@@ -1,24 +1,99 @@
-{% extends "shop/defaultBase.html" %}
+{% load static %}
 
-{% block page_title %}ورود به حساب کاربری - مهربدکالا{% endblock %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به حساب کاربری - مهربدکالا</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
 
-{% block content_main %}
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/loginFormStyles.css' %}">
 
-<div class="login-div-main">
-    <div class="login-div-loginform">
-        <form method="post" action="{% url 'mmk-shop-userAuth' %}">
-            {% csrf_token %}
-            <label for="user_Username">نام کاربری:</label><br>
-            <input type="text" id="user_Username" name="user_Username"><br>
-            <label for="user_Username">کلمه عبور:</label><br>
-            <input type="text" id="user_Password" name="user_Password"><br>
-            <input type="submit" value="ورود">
-        </form>
-    </div>
-    <div class="login-div-descriptions">
-        
-        
-    </div>
-</div>
+    <script type="js">
+        const themes = [
+    {
+        background: "#1A1A2E",
+        color: "#FFFFFF",
+        primaryColor: "#0F3460"
+    },
+    {
+        background: "#461220",
+        color: "#FFFFFF",
+        primaryColor: "#E94560"
+    },
+    {
+        background: "#192A51",
+        color: "#FFFFFF",
+        primaryColor: "#967AA1"
+    },
+    {
+        background: "#F7B267",
+        color: "#000000",
+        primaryColor: "#F4845F"
+    },
+    {
+        background: "#F25F5C",
+        color: "#000000",
+        primaryColor: "#642B36"
+    },
+    {
+        background: "#231F20",
+        color: "#FFF",
+        primaryColor: "#BB4430"
+    }
+];
 
-{% endblock %}
+const setTheme = (theme) => {
+    const root = document.querySelector(":root");
+    root.style.setProperty("--background", theme.background);
+    root.style.setProperty("--color", theme.color);
+    root.style.setProperty("--primary-color", theme.primaryColor);
+    root.style.setProperty("--glass-color", theme.glassColor);
+};
+
+const displayThemeButtons = () => {
+    const btnContainer = document.querySelector(".theme-btn-container");
+    themes.forEach((theme) => {
+        const div = document.createElement("div");
+        div.className = "theme-btn";
+        div.style.cssText = `background: ${theme.background}; width: 25px; height: 25px`;
+        btnContainer.appendChild(div);
+        div.addEventListener("click", () => setTheme(theme));
+    });
+};
+
+displayThemeButtons();
+
+    </script>
+</head>
+<body>
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <!--img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" /-->
+                <h1 class="opacity FONT-alexandria-heavy" style="font-size: 1.5em;">ورود به مهربدکالا</h1>
+                <form method="post" action="{% url 'mmk-shop-userAuth' %}">
+                    {% csrf_token %}
+                    <input type="text" class="FONT-alexandria-heavy" placeholder="نام کاربری" name="user_Username" id="user_Username" />
+                    <input type="password" class="FONT-alexandria-heavy" placeholder="کلمه عبور" name="user_Password" id="user_Password" />
+                    <!--button class="opacity">SUBMIT</button-->
+                    <input type="submit" style="cursor: pointer;" class="opacity FONT-alexandria-heavy" value="ورود">
+                </form>
+                <div class="register-forget opacity FONT-alexandria-heavy">
+                    <a href="" style="font-size: 0.95em;">هم‌اکنون بپیوندید!</a>
+                    <a href="" style="font-size: 0.95em;">فراموشی کلمه عبور</a>
+                </div>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+</body>
+</html>

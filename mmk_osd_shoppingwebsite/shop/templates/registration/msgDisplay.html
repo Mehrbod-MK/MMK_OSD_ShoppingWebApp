@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیام سیستم: {{ msgTitle }}</title>
+
+    <link rel="stylesheet" href="{% static 'css/defaultStyles.css' %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Automatic refresh -->
+    <meta http-equiv="refresh" content="3;url={{msgRedirectURL|default:'/'}}" />
+
+    <style>
+        *
+        {
+            transition: 1s all ease-in-out;
+        }    
+
+        body
+        {
+            background-color: gray;
+        }
+
+        .msg-bubble-div
+        {
+            height: 40vh;
+            margin: 0 20%;
+
+            background-image: linear-gradient(rgb(200, 200, 255), rgb(100, 100, 255));
+
+            border: 2px solid black;
+
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.7em;
+        }
+
+        .simple-border
+        {
+            width: 100%;
+
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    {% if msgType == 'MSG_SUCCESS' %}
+    <div class="msg-bubble-div FONT-alexandria-heaviest"
+    style="background-image: linear-gradient(rgb(200, 255, 200), rgb(100, 255, 100));">
+        <p>{{ msgTitle|default:'عنوان پیام' }}</p>
+        <div class="simple-border" style="margin: 0 -10px"></div>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 0.95em">{{msgText|default:'متن پیام اینجا وارد شود.'}}</p>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 0.7em; font-style: italic;">
+            لطفاً چند لحظه صبر کنید...
+        </p>
+    </div>
+    {% elif msgType == 'MSG_ERROR' %}
+    <div class="msg-bubble-div FONT-alexandria-heaviest"
+    style="background-image: linear-gradient(rgb(255, 200, 200), rgb(255, 100, 100));">
+        <p>{{ msgTitle|default:'عنوان پیام' }}</p>
+        <div class="simple-border" style="margin: 0 -10px"></div>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 0.95em">{{msgText|default:'متن پیام اینجا وارد شود.'}}</p>
+        <p class="FONT-alexandria-semiheavy" style="font-size: 0.7em; font-style: italic;">
+            لطفاً چند لحظه صبر کنید...
+        </p>
+    </div>
+    {% endif %}
+
+
+</body>
+</html>

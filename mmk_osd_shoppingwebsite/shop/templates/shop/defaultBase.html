@@ -24,7 +24,11 @@
             <a href="#" class="a-mainmenu-items">پرفروش‌ها</a>
             <a href="#" class="a-mainmenu-items">درباره ما</a>
             <a href="#" class="a-mainmenu-items">تماس با ما</a>
-            <a href="#" class="a-mainmenu-items">ورود/ثبت‌نام</a>
+            {% if is_UserLoggedIn != 'yes' %}
+                <a href="#" class="a-mainmenu-items">ورود/ثبت‌نام</a>
+            {% else %}
+                <a href="#" class="a-mainmenu-items" style="color: blue;">{{user_FirstName|default:user_Username}} ({{user_ItemsInCart}})</a>
+            {% endif %}
         </div>
     </nav>
 

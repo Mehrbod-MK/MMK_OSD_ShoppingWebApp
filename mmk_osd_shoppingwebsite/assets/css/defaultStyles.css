@@ -9,6 +9,13 @@
     transition: 0.25s all ease-in-out;
 }
 
+.FONT-alexandria-semiheavy {
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
 .FONT-alexandria-heavy {
   font-family: "Alexandria", sans-serif;
   font-optical-sizing: auto;
@@ -50,7 +57,7 @@ a
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 7%;
+    margin: 0 5%;
 }
 
 .shop-div-mainbar .a-mainmenu-items
@@ -69,22 +76,92 @@ a
 
 .shop-index-header-div
 {
-    background-color: gainsboro;
-
     margin: 0px 3px;
     padding: 7px;
 
-    border: 3px solid black;
     border-radius: 5px;
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-    height: 50vh;
+    align-items: center;
+
+    height: 70vh;
 }
 
 .shop-index-header-div .shop-index-main-title
 {
-    font-size: 3m;
+    font-size: 2em;
+    line-height: 150%;
 }
+
+.shop-index-header-div .shop-index-main-title:hover
+{
+    transform: scale(1.025);
+}
+
+.shop-index-header-div .shop-index-img-mart:hover
+{
+    transform: scale(1.1);
+    
+    opacity: 70%;
+}
+
+.shop-index-header-div .shop-index-img-mart
+{
+    width: auto;
+}
+
+.shop-index-header-div .shop-index-main-subtitle
+{
+    font-size: 1.5em;
+}
+
+.shop-index-header-div .shop-index-main-subtitle:hover
+{
+    transform: scale(1.1);
+}
+
+.shop-index-right-header-div
+{
+    margin-right: 20px;
+}
+
+.shop-index-header-images-div
+{
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.login-div-main
+{
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.login-div-main .login-div-loginform
+{
+    border: 1px solid black;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.login-div-main .login-div-descriptions
+{
+    border: 1px solid black;
+
+    width: 100%;
+    height: 100%;
+}
+
