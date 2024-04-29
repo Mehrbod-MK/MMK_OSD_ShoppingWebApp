@@ -13,6 +13,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+    <script>
+
+function Ask_Logout()
+{
+    if(confirm("کاربر گرامی {{user_Username|default:''}}، آیا مطمئن هستید که می‌خواهید از نشست کاربری خود خارج شوید؟"))
+    {
+        $.ajax({
+                type: "POST",
+                url: 'logout/',
+                cache: false,
+                data: { csrfmiddlewaretoken: '{{ csrf_token }}', 'ACTION': 'LOGOUT' },  
+                success: function callback(response){
+                           /* do whatever with the response */
+                           window.location.reload();
+                        }
+            });
+    }
+}
+
+    </script>
 </head>
 
 <body>
@@ -25,9 +48,9 @@
             <a href="#" class="a-mainmenu-items">درباره ما</a>
             <a href="#" class="a-mainmenu-items">تماس با ما</a>
             {% if is_UserLoggedIn != 'yes' %}
-                <a href="#" class="a-mainmenu-items">ورود/ثبت‌نام</a>
+                <a href="{% url 'mmk-shop-login' %}" class="a-mainmenu-items">ورود/ثبت‌نام</a>
             {% else %}
-                <a href="#" class="a-mainmenu-items" style="color: blue;">{{user_FirstName|default:user_Username}} ({{user_ItemsInCart}})</a>
+                <a href="#" onclick="Ask_Logout();" class="a-mainmenu-items" style="color: blue;">{{user_FirstName|default:user_Username}} ({{user_ItemsInCart}})</a>
             {% endif %}
         </div>
     </nav>

@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from django.contrib.auth import authenticate, login as auth_login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 
 # Create your views here.
 def index(request):
@@ -15,6 +15,10 @@ def index(request):
             'user_Username': request.user.get_username(),
 
             'user_ItemsInCart': 0,
+        }
+    else:
+        index_Metas= {
+            'is_UserLoggedIn': 'no'
         }
 
     return render(request, 'shop/index.html', context= index_Metas)
@@ -40,3 +44,9 @@ def userAuth(request):
                 'msgRedirectURL': '/login' }
         
     return render(request, 'registration/msgDisplay.html', context= metas)
+
+def logout(request):
+    if(request.user.is_authenticated):
+        auth_logout(request)
+    
+    return HttpResponse('OK')
