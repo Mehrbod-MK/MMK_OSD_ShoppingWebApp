@@ -24,12 +24,12 @@ function Ask_Logout()
     {
         $.ajax({
                 type: "POST",
-                url: 'logout/',
+                url: "{% url 'mmk-auth-logout' %}",
                 cache: false,
                 data: { csrfmiddlewaretoken: '{{ csrf_token }}', 'ACTION': 'LOGOUT' },  
                 success: function callback(response){
                            /* do whatever with the response */
-                           window.location.reload();
+                           window.location.replace("{% url 'mmk-shop-index' %}");
                         }
             });
     }
@@ -42,8 +42,8 @@ function Ask_Logout()
     <!-- Main menu on top -->
     <nav class="shop-nav-mainbar">
         <div class="shop-div-mainbar FONT-alexandria-heavy">
-            <a href="#" class="a-mainmenu-items">صفحه اصلی</a>
-            <a href="#" class="a-mainmenu-items">محصولات</a>
+            <a href="{% url 'mmk-shop-index' %}" class="a-mainmenu-items">صفحه اصلی</a>
+            <a href="{% url 'mmk-shop-products' %}" class="a-mainmenu-items">محصولات</a>
             <a href="#" class="a-mainmenu-items">پرفروش‌ها</a>
             <a href="#" class="a-mainmenu-items">درباره ما</a>
             <a href="#" class="a-mainmenu-items">تماس با ما</a>

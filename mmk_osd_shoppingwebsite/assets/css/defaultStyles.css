@@ -165,3 +165,44 @@ a
     height: 100%;
 }
 
+.component-productDisplay-details-div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.component-product-div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin: 3px 1px;
+    padding: 1px 7px;
+
+    border: 2px solid gray;
+    border-radius: 7px;
+
+    width: 48%;
+    /*max-width: 40%;*/
+}
+
+.shop-products-div
+{
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    max-width: 100%;
+}
+
+.component-product-div:hover
+{
+    cursor: pointer;
+
+    background-color: lightgreen;
+}

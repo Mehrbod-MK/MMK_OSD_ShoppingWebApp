@@ -8,5 +8,7 @@ urlpatterns = [
     path('logout/', views.logout, name='mmk-auth-logout'),
     path('userAuth/', views.userAuth, name='mmk-shop-userAuth'),
 
+    path('products/', views.products, name='mmk-shop-products'),
+
     path('', views.index, name='mmk-shop-index'),
 ]

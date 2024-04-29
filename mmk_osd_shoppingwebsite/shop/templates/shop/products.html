@@ -1,0 +1,14 @@
+{% extends "shop/defaultBase.html" %}
+
+{% block content_header %}
+<h1 class="FONT-alexandria-heaviest" style="text-align: center;">محصولات مهربد کالا</h1>
+<hr>
+{% endblock %}
+
+{% block content_main %}
+<div class="shop-products-div">
+    {% for product in products %}
+        {% include "components/component_ProductDisplay.html" %}
+    {% endfor %}
+</div>
+{% endblock %}

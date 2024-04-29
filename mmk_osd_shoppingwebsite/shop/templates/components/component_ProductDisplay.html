@@ -1,0 +1,9 @@
+<div class="component-product-div">
+    <div class="component-productDisplay-details-div FONT-alexandria-heavy">
+        <h2>{{product.Product_Name|default:'نام محصول'}}</h2>
+        <h3>{{product.Product_Price|default:'1'}} تومان</h3>
+        <h4>دسته‌بندی: <b>{{product.Product_Category|default:'دسته‌بندی نشده'}}</b></h4>
+    </div>
+    <img src="{{product.Product_ThumbImage|default:'./../../../static/images/blank-product.png'}}" width="176px" height="176px">
+</div>
+
